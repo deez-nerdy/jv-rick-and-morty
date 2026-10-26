@@ -8,6 +8,7 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface CharacterMapper {
+    @Mapping(source = "id", target = "externalId")
     CharacterDto characterResponseResultDtoToCharacterDto(
             CharacterResponseResultDto characterResponseResultDto);
 
