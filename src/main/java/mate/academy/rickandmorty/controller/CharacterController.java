@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class CharacterController {
     private final CharacterService characterService;
 
-    @GetMapping("/{name}")
+    @GetMapping
     @Operation(summary = "Search by name",
             description = "Search character by name or part of it")
     public List<CharacterDto> getCharactersByName(@RequestParam @Valid String name) {
